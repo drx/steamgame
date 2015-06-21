@@ -246,7 +246,8 @@ msg_graphs += render_graph('d_level_60', 'Levels/s (60 min)', series['d_level_60
 
 
 extra = []
-extra.append('<b>EDPS</b> (Expected DPS) = <b>E</b>[DPS] = 20*(CritMult*DPC*Crit%+DPC*(1-Crit%)) + AutoDPS. Crit% is capped at 100%.')
+extra.append('Check out the <a href="/steamgame/hall_of_fame.html"><b>Hall Of Fame</b></a>!')
+extra.append('<p><b>EDPS</b> (Expected DPS) = <b>E</b>[DPS] = 20*(CritMult*DPC*Crit%+DPC*(1-Crit%)) + AutoDPS. Crit% is capped at 100%.</p>')
 extra.append('<p>Damage values are hypothetical totals assuming 100% player activity.</p>')
 extra.append('<p><b>Note:</b> Wormhole counts are updated when the game stats update, which is every 5-20 minutes.')
 
