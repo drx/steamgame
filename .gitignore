@@ -1,0 +1,4 @@
+*.json
+*.pyc
+*.sw?
+ranking*.html
