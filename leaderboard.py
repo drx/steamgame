@@ -94,11 +94,17 @@ for fn in ('data/game_stats.json'.format(),
 i = 1
 for row in rows:
     totals = row['totals']
-    row_100 = totals['game_level'] == 100000000
+    short_skip = False
+
+    game_id = row['game_id']
+    game_name = game_list_dict[row['game_id']]
+
+    if totals['game_level'] == 100000000 or 'YOWH' in game_name:
+        short_skip = True
 
     tbody.append('<tr>')
     tbody.append('<td>{}</td>'.format(i))
-    if not row_100:
+    if not short_skip:
         tbody_s.append('<tr>')
         tbody_s.append('<td>{}</td>'.format(i))
 
@@ -109,8 +115,6 @@ for row in rows:
         if k == 'i':
             continue
         if k == 'player_name':
-            game_id = row['game_id']
-            game_name = game_list_dict[row['game_id']]
             if game_name:
                 name = '{}&nbsp;({})'.format(game_id, game_name)
             else:
@@ -131,10 +135,10 @@ for row in rows:
             line = '<td>{}</td>'.format(totals.get(k, 0))
 
         tbody.append(line)
-        if 'short' in header.options and not row_100:
+        if 'short' in header.options and not short_skip:
             tbody_s.append(line)
     tbody.append('</tr>')
-    if not row_100:
+    if not short_skip:
         tbody_s.append('</tr>')
     i += 1
 
