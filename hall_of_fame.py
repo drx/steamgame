@@ -54,7 +54,7 @@ def get_player_data(steamid):
 
 content = ''
 content += '<h2>Thanks</h2>'
-content += '<p>I would to thank Valve for setting up this incredibly fun event, MSG2015 Steam Group Staff for sleeping 2 hours a day on average, tirelessly working on coordinating over 10000 people as well as everyone who played with us, or against us. Thanks guys.</p>'
+content += '<p>I would to thank Valve for setting up this incredibly fun event, MSG2015 Steam Group Staff for sleeping 2 hours a day on average, tirelessly working on coordinating over 20000 people as well as everyone who played with us, or against us. Thanks guys.</p>'
 content += 'Rooms 46550 (4th) and 47686 (9th) have about 200-300 people missing each, because I was not tracking them at the moment they hit 100M. If anyone has the data, please message me on Steam and I will add it.'
 
 content += '<h2>MSG2015 Steam Group Staff</h2>'
