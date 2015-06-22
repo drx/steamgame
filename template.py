@@ -86,6 +86,8 @@ def render_template(filename, context):
     for key, value in context.items():
         if key == 'long':
             continue
+        if key == 'title':
+            value = re.sub('<.*?>', '', value)
         template = template.replace('{'+key+'}', value)
 
     if context['long']:
